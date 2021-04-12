@@ -16,3 +16,5 @@
      
 4. `hangman` : A word game where you test your vocabulary!
      - `hangman.py` has the code for execution of the game and `words.py` has a list of hundreds of words which is imported into the main code.
+     
+5. `tic-tac-toe` : Play with the computer.
