@@ -1,5 +1,5 @@
 import time
-from player import HumanPlayer, RandomComputerPlayer, SmartComputerPlayer
+from player import HumanPlayer, RandomComputerPlayer, GeniusComputerPlayer
 class TicTacToe:
     def __init__(self):
         self.board = [' ' for _ in range(9)]
@@ -112,7 +112,36 @@ def play(game, x_player, o_player, print_game = True):
         print('It\'s a tie!')
 
 if __name__ == '__main__':
-    x_player = HumanPlayer('X')
-    o_player = SmartComputerPlayer('O')
-    t = TicTacToe()
-    play(t, x_player, o_player, print_game=True)
+    ans = 'y'
+    while ans == 'y':
+        choice = int(input("Options: \n1. Play with a random computer \n2. Play with a smart computer \n3. Smart computer against random computer \nYour choice: "))
+        print()
+        if choice == 1:
+            x_player = HumanPlayer('X')
+            o_player = RandomComputerPlayer('O')
+            t = TicTacToe()
+            play(t, x_player, o_player, print_game=True)
+        elif choice == 2:
+            x_player = HumanPlayer('X')
+            o_player = GeniusComputerPlayer('O')
+            t = TicTacToe()
+            play(t, x_player, o_player, print_game=True)
+        elif choice == 3:
+            x_wins = 0 
+            o_wins = 0
+            ties = 0
+            for _ in range(10):
+                x_player = GeniusComputerPlayer('X')
+                o_player = RandomComputerPlayer('O')
+                t = TicTacToe()
+                result = play(t, x_player, o_player, print_game=False)
+                if result == 'X':
+                    x_wins += 1
+                elif result == 'O':
+                    o_wins += 1
+                else:
+                    ties += 1
+            print(f'After 10 iterations, we see {x_wins} X wins, {o_wins} O wins, {ties} ties.')
+        else:
+            print("Invalid option. Choose again.")
+        ans = input("Do you want to play again? yes(y) or no(n) ").lower()
