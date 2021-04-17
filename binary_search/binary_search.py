@@ -4,7 +4,7 @@ import time
 
 # We will prove that binary search is faster than naive search!
 
-# naive seach: scan entire list and ask if its eqaul to the target
+# naive search: scan entire list and ask if its equal to the target
 # if yes, return the index
 # if no, then return -1
 def naive_search(l, target):
