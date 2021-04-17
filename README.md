@@ -20,5 +20,5 @@
 5. `tic-tac-toe` : Play with the random computer, play with the smart computer or make the random computer and smart computer play against each other!     
      - `player.py` has different types of players(human, random computer, smart computer) and `game.py` has the code for implementation of tic-tic-toe.
      - We are using Minimax Algorithm to create a Tic-Tac-Toe AI. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal          move for a player, assuming that your opponent also plays optimally. It is widely used in two player turn-based games such as Tic-Tac-Toe, Backgammon, Mancala, Chess, etc.
-6. `binary search` : `binary_search.py` implementing both naive search & binary search and comparing their implementation time.
+6. `binary_search` : `binary_search.py` implementing both naive search & binary search and comparing their implementation time.
      - Binary search follows divide and conquer approach. We leverage the fact that our list is SORTED.
