@@ -22,4 +22,7 @@
      - We are using Minimax Algorithm to create a Tic-Tac-Toe AI. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal          move for a player, assuming that your opponent also plays optimally. It is widely used in two player turn-based games such as Tic-Tac-Toe, Backgammon, Mancala, Chess, etc.
 6. `binary_search` : `binary_search.py` implementing both naive search & binary search and comparing their implementation time.
      - Binary search follows divide and conquer approach. We leverage the fact that our list is SORTED.
-7. `minesweeper` :
+7. `minesweeper` : Command line version of Minesweeper game using recursion and classes.  
+     - `minesweeper.py` creates a board, plants bombs at random positions, take user input, if it is a bomb then game over otherwise digs recursively!
+8. `sudoku` : Sudoku solver using recursion.
+     - `sudoku.py` returns True and solves a given sudoku if solvable else returns False. 
